@@ -122,7 +122,7 @@ void draw()
     song.unmute();
   }
 
-  if (mousePressed && mouseX >= 321 && mouseX <= 323 && mouseY >= 420 && mouseY <= 422 && screen == 0)
+  if (mousePressed && mouseX >= 320 && mouseX <= 324 && mouseY >= 419 && mouseY <= 423 && screen == 0)
   {
 
     screen=1;
