@@ -1,4 +1,5 @@
-// This is a fun find the dot game made by Shaan Navani. Enjoy! If you click it, you win!
+// This is a fun find the dot game made by Shaan Navani. Enjoy! 
+// If you click it, you win! Remember to be precise when you click!
 
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -24,6 +25,9 @@ void setup()
 
   song = minim.loadFile("Scary Sound.mp3");
   screen = 0;
+  
+  song.loop();
+  song.mute();
 }
 
 
@@ -44,7 +48,7 @@ void draw()
   if (screen == 1)
 
   {
-
+    song.unmute();
     background(0);
 
     fill(175, 0, 0);
@@ -113,8 +117,9 @@ void draw()
     fill(255, 0, 0);
     triangle(295, 350, 380, 350, 337.5, 255);
     
-    song.play();
     
+    song.setLoopPoints(1000,2000);
+    song.unmute();
   }
 
   if (mousePressed && mouseX >= 321 && mouseX <= 323 && mouseY >= 420 && mouseY <= 422 && screen == 0)
