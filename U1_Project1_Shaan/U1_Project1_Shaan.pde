@@ -117,8 +117,8 @@ void draw()
     fill(255, 0, 0);
     triangle(295, 350, 380, 350, 337.5, 255);
     
-    
     song.setLoopPoints(1000,2000);
+    
     song.unmute();
   }
 
